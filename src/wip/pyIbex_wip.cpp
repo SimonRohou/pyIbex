@@ -11,8 +11,10 @@
 using namespace boost;
 
 void export_Paving();
+void export_Tube();
 
 void export_wip()
 {
-	export_Paving();
+  export_Paving();
+	export_Tube();
 }

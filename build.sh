@@ -3,6 +3,7 @@
 set -x
 
 cd ${0%%$(basename $0)}
-mkdir build
+mkdir -p build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=${HOME} ../ && make && make install && make test
+cmake -DCMAKE_INSTALL_PREFIX=${HOME} ../ && make && make install
+#make test
