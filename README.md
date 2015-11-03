@@ -64,10 +64,15 @@ Alternatively, run the provided `build.sh` script.
 We assume that we want to install files in $DEVEL_BASE directory.
 
 + Firstly python dev packages must be installed.
+```
+sudo apt-get install python3-numpy
+```
 + Boost Python needs to be compiled with the correct python version. 
 	If it is not the case, download the sources from [Boost] webpage.
-+ Build boost from source
+	Build Boost from sources:
 ```bash
+wget http://skylink.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz
+tar -xvf boost_1_58_0.tar.gz
 cd boost_1_58_0
 sh ./bootstrap.sh --with-python=3.4
 ./b2 --with-python variant=release link=static
